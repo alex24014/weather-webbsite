@@ -12,6 +12,7 @@ time();
 let cityNow = document.querySelector("#city");
 let cityNowInput = document.querySelector("#search-input");
 let temperature = document.querySelector("#now-deegre");
+let celciusTemperature = null;
 
 function place(event) {
   event.preventDefault();
@@ -39,6 +40,8 @@ function handleResponse(response) {
   let wind = document.querySelector("#wind");
   let emo = document.querySelector("#emo");
 
+  celciusTemperature = response.data.main.temp;
+
   temperature.innerHTML = `${Math.round(response.data.main.temp)}`;
   prec.innerHTML = `Precipitation ${Math.round(response.data.main.humidity)} %`;
   wind.innerHTML = `Wind ${Math.round(response.data.wind.speed)} m/s`;
@@ -50,6 +53,7 @@ function currentPosition(position) {
   axios.get(apiUrl2).then(yourTemperature);
 }
 function yourTemperature(response) {
+  celciusTemperature = response.data.main.temp;
   temperature.innerHTML = `${Math.round(response.data.main.temp)}`;
   cityNow.innerHTML = `${response.data.name}`;
   prec.innerHTML = `Precipitation ${Math.round(response.data.main.humidity)} %`;
@@ -61,3 +65,20 @@ function nowPosition() {
 }
 let button = document.querySelector("button");
 button.addEventListener("click", nowPosition);
+
+function showCelciusT(event) {
+  event.preventDefault();
+  temperature.innerHTML = Math.round(celciusTemperature);
+}
+
+let celcius = document.querySelector("#C-deegre");
+celcius.addEventListener("click", showCelciusT);
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperatureFahrenheit = (celciusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(temperatureFahrenheit);
+}
+
+let fahrenheit = document.querySelector("#F-deegre");
+fahrenheit.addEventListener("click", showFahrenheit);
