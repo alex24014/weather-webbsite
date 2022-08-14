@@ -69,6 +69,8 @@ button.addEventListener("click", nowPosition);
 function showCelciusT(event) {
   event.preventDefault();
   temperature.innerHTML = Math.round(celciusTemperature);
+  celcius.classList.add("cool");
+  fahrenheit.classList.remove("cool");
 }
 
 let celcius = document.querySelector("#C-deegre");
@@ -78,6 +80,8 @@ function showFahrenheit(event) {
   event.preventDefault();
   let temperatureFahrenheit = (celciusTemperature * 9) / 5 + 32;
   temperature.innerHTML = Math.round(temperatureFahrenheit);
+  celcius.classList.remove("cool");
+  fahrenheit.classList.add("cool");
 }
 
 let fahrenheit = document.querySelector("#F-deegre");

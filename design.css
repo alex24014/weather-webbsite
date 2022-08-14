@@ -63,12 +63,14 @@ p {
   width: 80%;
 }
 .cool {
+  color: black;
+  cursor: default;
   text-decoration: none;
 }
 .cool:hover {
   transition: all 200ms ease-in-out;
-  text-decoration: underline;
-  color: #3a68a1;
+  text-decoration: none;
+  color: black;
 }
 .new {
   font-weight: lighter;
