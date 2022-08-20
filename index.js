@@ -66,7 +66,7 @@ function displayForecast(response) {
                     <div class="col-4">
                       <img src="http://openweathermap.org/img/wn/${
                         eachForecastDays.weather[0].icon
-                      }@2x.png" width="40"> </img>
+                      }@2x.png" width="40" > </img>
                       </div>
                       <div class="col-4" id="weather-1">
                       ${Math.round(eachForecastDays.temp.day)}°C
@@ -92,12 +92,11 @@ function getForecast(coordinates) {
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
-
+let emo = document.querySelector("#emo");
 function handleResponse(response) {
   let temperature = document.querySelector("#now-deegre");
   let prec = document.querySelector("#prec");
   let wind = document.querySelector("#wind");
-  let emo = document.querySelector("#emo");
 
   celciusTemperature = response.data.main.temp;
 
@@ -126,6 +125,7 @@ function yourTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/10d${response.data.weather[0].icon}@2x.png`
   );
+  getForecast(response.data.coord);
 }
 function nowPosition() {
   navigator.geolocation.getCurrentPosition(currentPosition);
