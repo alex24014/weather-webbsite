@@ -16,78 +16,154 @@
 
   </head>
   <body>
+       <div class="body">
       <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <form id="search-form">
-          <input type="text" placeholder="Search for a city" class="form" id="search-input" />
-        
-          <input type="submit" value="Search" class="form1"/>
-        </form>
-        <button>Current</button>
-      </div>
-    </div>
-      <div class="row">
-        <div class="col-6">
-          <section>
-            <span class="weather" id="emo"> 🌤 </span>
-            <br>
-            <h1>
-                <span id="now-deegre">20</span>
-                <a class="cool" href="#" id="C-deegre">°C</a>
-                <span>/</span>
-                <a class="cool" href="#" id="F-deegre">F</a>
+        <div class="row">
+          <div class="col-12">
+            <form id="search-form">
+              <input
+                type="text"
+                placeholder="Search for a city"
+                class="form"
+                id="search-input"
+              />
 
-            </h1>
-            <hr>
-            <h6 id="currentDate">Today</h6>
-           <ul class="city">
-               <li id="prec">
-                   precipitation 67%
-               </li>
-               <li id="wind">
-                   wind 5 m/s
-               </li>
+              <input
+                type="submit"
+                value="Search"
+                class="form1"
+                id="submit-input"
+              />
+            </form>
+            <button>Current</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <section>
+              <span class="weather" id="emo"> 🌤 </span>
+              <br />
+              <h1>
+                <div class="weather-unit">
+                  <span id="now-deegre">20</span>
+                  <a class="cool" href="#" id="C-deegre">°C</a>
 
-           </ul>
-            
-        </section>
-        <p id="city">Stocholm</p>
+                  <span>/</span>
+                  <a class="cool-2" href="#" id="F-deegre">F</a>
+                </div>
+              </h1>
+              <hr />
+              <h6 id="currentDate">Today</h6>
+              <ul class="city">
+                <li id="prec">precipitation 67%</li>
+                <li id="wind">wind 5 m/s</li>
+              </ul>
+            </section>
+            <p id="city">Stocholm</p>
           </div>
           <div class="col-6">
               <ul class="days">
-                  <li class="C">
+                  <li class="C" id="weather-1">
+                    <div class="container">
+                      <div class="row">
+                    <div class="col-4">
                       <span class="weather1">
                           🌧
                       </span>
+                      </div>
+                      <div class="col-4">
                       15°C
+                      </div>
+                      <div class="col-4">
+                      <span class="day1">Monday</span> 
+                      </div>
+                      </div>
+                      </div>
                     </li>
-                    <li class="C">
-                        <span class="weather1">🌥</span>
-                        21°C
+                     <li class="C" id="weather-2">
+                    <div class="container">
+                      <div class="row">
+                    <div class="col-4">
+                      <span class="weather1">
+                          🌧
+                      </span>
+                      </div>
+                      <div class="col-4">
+                      15°C
+                      </div>
+                      <div class="col-4">
+                      <span class="day1">Monday</span> 
+                      </div>
+                      </div>
+                      </div>
+                    </li> 
+                    <li class="C" id="weather-3">
+                    <div class="container">
+                      <div class="row">
+                    <div class="col-4">
+                      <span class="weather1">
+                          🌧
+                      </span>
+                      </div>
+                      <div class="col-4">
+                      15°C
+                      </div>
+                      <div class="col-4">
+                      <span class="day1">Monday</span> 
+                      </div>
+                      </div>
+                      </div>
+                    </li> 
+                    <li class="C" id="weather-4">
+                    <div class="container">
+                      <div class="row">
+                    <div class="col-4">
+                      <span class="weather1">
+                          🌧
+                      </span>
+                      </div>
+                      <div class="col-4">
+                      15°C
+                      </div>
+                      <div class="col-4">
+                      <span class="day1">Monday</span> 
+                      </div>
+                      </div>
+                      </div>
+                    </li> 
+                    <li class="C" id="weather-5">
+                    <div class="container">
+                      <div class="row">
+                    <div class="col-4">
+                      <span class="weather1">
+                          🌧
+                      </span>
+                      </div>
+                      <div class="col-4">
+                      15°C
+                      </div>
+                      <div class="col-4">
+                      <span class="day1">Monday</span> 
+                      </div>
+                      </div>
+                      </div>
                     </li>
-                    <li class="C">
-                        <span class="weather1">⛈</span>
-                        18°C
-                    </li >
-                    <li class="C">
-                        <span class="weather1">☀</span>
-                        22°C
-                    </li>
-                    <li class="C">
-                        <span class="weather1">☁</span>
-                        15°C
-                    </li>
+                    
+                    
               </ul>
           </div>
           <div class="col-6">
              
-          </div>
         </div>
+        
+      </div>
+
+      <br />
+      <a class="new" href="https://github.com/alex24014/weather-webbsite">
+        Oppen-source code
+      </a>
+      <span class="new">coded by Aleksandra Zhurzhenko</span>
     </div>
-    </div>
-   <br>
-    <a class="new" href="https://github.com/alex24014/weather-webbsite"> Oppen-source code </a>
-     <span class="new">coded by Aleksandra Zhurzhenko</span> 
+
     <script src="index.js"></script>
     </body>

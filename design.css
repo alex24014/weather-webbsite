@@ -27,6 +27,19 @@ p {
   position: relative;
   top: 30px;
 }
+button {
+  position: relative;
+  top: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: #7ec64b;
+  padding: 10px;
+}
+button:hover {
+  transition: all 200ms ease-in-out;
+  border: 1px #7ec64b;
+  background-color: #9ac17d;
+}
 .form1:hover {
   background: #c47979;
   color: #3d1212;
@@ -38,6 +51,9 @@ p {
 }
 .C {
   border: 1px solid;
+  font-size: medium;
+  margin: 3px;
+  padding: 10px;
 }
 .days {
   list-style-type: none;
@@ -76,4 +92,12 @@ p {
   font-weight: lighter;
   font-size: medium;
   text-align: left;
+}
+.weather-unit .active {
+  color: black;
+  cursor: default;
+}
+
+.weather-unit .active:hover {
+  text-decoration: none;
 }
