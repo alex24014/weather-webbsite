@@ -86,3 +86,9 @@ function showFahrenheit(event) {
 
 let fahrenheit = document.querySelector("#F-deegre");
 fahrenheit.addEventListener("click", showFahrenheit);
+
+function displayForecast(); {
+      let forecast12 = document.querySelector("#forecast-weather");
+      forecast12.innerHTML="hi";
+     }
+     displayForecast();
