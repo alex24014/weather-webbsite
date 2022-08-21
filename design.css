@@ -29,7 +29,8 @@ h1 {
 hr {
   margin: 0%;
   padding: -10px;
-  border-radius: 45%;
+  border: 1px solid;
+  border-radius: 50%;
 }
 h6 {
   margin: 0;
@@ -45,7 +46,7 @@ p {
 button {
   position: relative;
   top: 10px;
-  border: none;
+
   border-radius: 15px;
   background-color: black;
   padding: 10px;
