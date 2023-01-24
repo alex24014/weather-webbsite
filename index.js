@@ -40,7 +40,7 @@ function futureDays(timestamp) {
     "Sunday:",
     "Monday:",
     "Tuesday:",
-    "Wednesday:",
+    "Wedneasday:",
     "Thursday:",
     "Friday:",
     "Suterday:",
